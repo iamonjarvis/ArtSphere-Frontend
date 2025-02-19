@@ -1,7 +1,8 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../services/axiosInstance";
 import { PhotoIcon } from "@heroicons/react/24/outline";
+import logo from "../assets/logoartsp.png"; // Import the logo
 
 function LoginSignup() {
   const [isSignup, setIsSignup] = useState(false);
@@ -81,7 +82,7 @@ function LoginSignup() {
       <header className="py-8">
         <div className="container mx-auto flex justify-center">
           <img
-            src="src/assets/logoartsp.png"
+            src={logo} // Use the imported logo
             alt="Logo"
             className="w-48 md:w-64 lg:w-80 object-contain"
           />
